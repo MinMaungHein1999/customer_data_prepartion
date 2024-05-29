@@ -1,13 +1,9 @@
-from downloader_factory import DownloaderFactory
 from file_manager import FileManager
 import boto3
 import zipfile
 import os
-import logging
-import json
-logging.basicConfig(level=logging.INFO)
 
-class S3Downloader(DownloaderFactory):
+class S3Downloader:
 
     def __init__(self, bucket, region_name, temp_path):
         self.bucket = bucket
